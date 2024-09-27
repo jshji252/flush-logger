@@ -66,9 +66,9 @@ export function logEntriesToString (logEntries){
     .join('');
 }
 
-
-const logger = FlushLogger("log.txt", 5000, 500, [logEntriesToString]);
-
-setInterval(() => {
-  logger("Hello World! " + Math.floor(Math.random()*100), "abc");
-}, 200);
+//
+// const logger = FlushLogger("log.txt", 5000, 500, [logEntriesToString]);
+//
+// setInterval(() => {
+//   logger("Hello World! " + Math.floor(Math.random()*100), "abc");
+// }, 200);
