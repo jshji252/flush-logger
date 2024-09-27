@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "simple logger that writes to disk, when either a time limit is reached or a log count threshold is exceeded (e.g., 5 seconds or 20 logs)",
   "main": "main.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

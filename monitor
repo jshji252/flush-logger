@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if echo | awk 'BEGIN { if (strftime()) exit 0; else exit 1 }'; then
+  tail -f log.txt | awk '{printf $1" "; printf strftime("%Y-%m-%d %H:%M:%S", $2/1000 + 9*3600)" "; for (i=3; i<=NF; i++) printf "%s ", $i; print ""}'
+else
+  tail -f log.txt | gawk '{printf $1" "; printf strftime("%Y-%m-%d %H:%M:%S", $2/1000 + 9*3600)" "; for (i=3; i<=NF; i++) printf "%s ", $i; print ""}'
+fi
